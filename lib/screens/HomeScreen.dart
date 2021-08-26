@@ -29,12 +29,14 @@ class HomeScreen extends StatelessWidget {
       ),
       floatingActionButton: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
         FloatingActionButton(
+            heroTag: "btn1",
             onPressed: () => context.read<CounterProvider>().decrement(),
             tooltip: 'Decrement',
             child : Icon(Icons.remove)
         ),
         SizedBox( width: 10.0,),
         FloatingActionButton(
+            heroTag: "btn2",
             onPressed: () {
               context.read<CounterProvider>().reset();
             },
@@ -43,6 +45,7 @@ class HomeScreen extends StatelessWidget {
         ),
         SizedBox( width: 10.0,),
         FloatingActionButton(
+          heroTag: "btn3",
           onPressed: () {
             context.read<CounterProvider>().increment();
           },
